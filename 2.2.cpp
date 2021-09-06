@@ -1,4 +1,9 @@
-//Tournament method.
+/*
+  Find the maximum and minimum element in an array.
+  2.1 Linear Search.
+  2.2 Tournament method.
+  2.3 Compare in pairs.
+*/
 
 #include<iostream>
 #include<bits/stdc++.h>
