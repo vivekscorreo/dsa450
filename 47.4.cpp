@@ -10,10 +10,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void reverse_string(string &input){
+void reverse_string(string &input, int pointer){
     int length = input.length();
-    for(int i=0, j = length - 1; i<j; i++, j--)
-        swap(input[i], input[j]);
+    if(pointer >= length/2)
+        return;
+    
+    swap(input[pointer], input[length - 1 - pointer]);
+    reverse_string(input, ++pointer);
 }
 
 int main() {
@@ -24,7 +27,7 @@ int main() {
 	while(testcases--){
 	   string input;
 	   cin>> input;
-	   reverse_string(input);
+	   reverse_string(input, 0);
 	   cout<< input<< endl;
 	}
 	
